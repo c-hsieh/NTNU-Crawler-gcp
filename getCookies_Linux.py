@@ -192,12 +192,12 @@ while success != True:
 
     delay = 10  # seconds
     try:
-        try:
-            fastrack1005 = WebDriverWait(driver, 10).until(
-                EC.element_to_be_clickable((By.ID, 'button-1005-btnWrap')))
-            fastrack1005.click()
-        except:
-            print("wowo")
+        # try:
+        fastrack1005 = WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.ID, 'button-1005-btnWrap')))
+        fastrack1005.click()
+        # except:
+        # print("wowo")
         fastrack = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.ID, 'button-1017-btnWrap')))
         fastrack.click()

@@ -22,6 +22,12 @@ wget https://raw.githubusercontent.com/garywu/gae-selenium/master/install.sh && 
 
 mv chromedriver anaconda3/envs/crawler/bin
 
+//set up Pytesseract
+https://stackoverflow.com/questions/50951955/pytesseract-tesseractnotfound-error-tesseract-is-not-installed-or-its-not-i
+
+sudo apt-get install tesseract-ocr
+sudo apt-get install libtesseract-dev
+
 //run getCookie.py
 nohup python getCookies.py&
 ## chmod +x getCookies.py
