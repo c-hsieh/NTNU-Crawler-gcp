@@ -142,7 +142,7 @@ while success != True:
     options.add_argument('--headless')
     options.add_argument("window-size=1200x600")
     driver = webdriver.Chrome(
-        "/home/genius861030/anaconda3/envs/crawler/bin/chromedriver", options=options)
+        "/home/genius861030/miniconda3/envs/crawler/bin/chromedriver", options=options)
     # print("chromedriverPath", chromedriverPath)
     driver.get(
         "http://cos1.ntnu.edu.tw/AasEnrollStudent/LoginCheckCtrl?language=TW")
