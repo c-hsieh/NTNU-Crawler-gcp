@@ -34,7 +34,7 @@ pip install -r requirements.txt
 ```sh
 wget https://raw.githubusercontent.com/garywu/gae-selenium/master/install.sh && chmod +x install.sh && ./install.sh &&  ./start_headless.sh && ./demo.py
 
-mv chromedriver anaconda3/envs/crawler/bin
+mv chromedriver /home/[name]/miniconda3/envs/crawler/bin/
 ```
 * ### [set up Pytesseract](https://stackoverflow.com/questions/50951955/pytesseract-tesseractnotfound-error-tesseract-is-not-installed-or-its-not-i)
 
@@ -44,7 +44,7 @@ sudo apt-get install libtesseract-dev
 ```
 * ### run getCookie.py
 ```sh
-chmod +x getCookies_Linux.py catCookies.sh createCookies.sh killCookies.sh selectCourse_Linux.py selectCourse_Linux.sh
+chmod +x getCookies_Linux.py catCookies.sh createCookies.sh killCookies.sh
 ./createCookies.sh [arg1] [arg2]
 ./catCookies.sh [arg1] [arg2]
 ./killCookies.sh [arg1] [arg2]
@@ -52,9 +52,9 @@ chmod +x getCookies_Linux.py catCookies.sh createCookies.sh killCookies.sh selec
 # nohup python getCookies_Linux.py&
 
 ```
-* ### run getCookie.py
+* ### run selectCourse_Linux.py
 ```sh
-chmod +x selectCourse_Linux.py selectCourse_Linux.sh
+chmod +x selectCourse_Linux.py toSelectCourse.sh
 ./selectCourse_Linux.sh [arg1] 
 
 ```
