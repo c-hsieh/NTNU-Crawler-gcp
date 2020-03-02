@@ -10,8 +10,17 @@ bash Miniconda3-4.7.12.1-Linux-x86_64.sh
 
 rm Miniconda3-4.7.12.1-Linux-x86_64.sh
 
-source .bahsrc
+source .bashrc
 . ~/.bashrc
+```
+* ### install git
+```sh
+sudo apt install git-all
+```
+
+* ### [github](https://github.com/Aaron3141/NTNU-Crawler-gcp.git)
+```sh
+git clone https://github.com/Aaron3141/NTNU-Crawler-gcp.git
 ```
 * ### set up python enviroment
 ```sh
@@ -33,21 +42,21 @@ mv chromedriver anaconda3/envs/crawler/bin
 sudo apt-get install tesseract-ocr
 sudo apt-get install libtesseract-dev
 ```
-
-* ### install git
-```sh
-sudo apt install git-all
-```
-
-* ### [github](https://github.com/Aaron3141/NTNU-Crawler-gcp.git)
-```sh
-git clone https://github.com/Aaron3141/NTNU-Crawler-gcp.git
-```
-
 * ### run getCookie.py
 ```sh
-nohup python getCookies.py&
-chmod +x getCookies.py
+chmod +x getCookies_Linux.py catCookies.sh createCookies.sh killCookies.sh selectCourse_Linux.py selectCourse_Linux.sh
+./createCookies.sh [arg1] [arg2]
+./catCookies.sh [arg1] [arg2]
+./killCookies.sh [arg1] [arg2]
+
+# nohup python getCookies_Linux.py&
+
+```
+* ### run getCookie.py
+```sh
+chmod +x selectCourse_Linux.py selectCourse_Linux.sh
+./selectCourse_Linux.sh [arg1] 
+
 ```
 
 * ### kill all
