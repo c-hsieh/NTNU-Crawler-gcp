@@ -1,0 +1,39 @@
+// set up Anaconda under Google Cloud VM and transfer files on Windows
+https://medium.com/google-cloud/set-up-anaconda-under-google-cloud-vm-on-windows-f71fc1064bd7
+
+wget https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86_64.sh
+
+bash Anaconda3–2018.12-Linux-x86_64.sh
+
+rm Anaconda3–2018.12-Linux-x86_64.sh
+
+source .bahsrc
+. ~/.bashrc
+
+// set up python enviroment
+conda env create -f env.yml
+conda activate crawler
+pip install -r requirements.txt 
+
+//set up selenium python
+https://github.com/garywu/google-compute-engine-selenium
+
+wget https://raw.githubusercontent.com/garywu/gae-selenium/master/install.sh && chmod +x install.sh && ./install.sh &&  ./start_headless.sh && ./demo.py
+
+mv chromedriver anaconda3/envs/crawler/bin
+
+//run getCookie.py
+nohup python getCookies.py&
+## chmod +x getCookies.py
+
+//kill all
+kill -9 -1
+
+//jobs
+ps ufx
+ps aux | grep getCookies.py 
+ps -la
+ps ax
+
+
+
