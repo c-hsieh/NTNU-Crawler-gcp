@@ -1,4 +1,4 @@
-#!/home/genius861030/anaconda3/envs/crawler/bin/python -u
+#!/home/genius861030/miniconda3/envs/crawler/bin/python -u
 
 import personalInf
 from threading import Thread
