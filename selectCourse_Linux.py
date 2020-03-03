@@ -1,5 +1,7 @@
 #!/home/genius861030/miniconda3/envs/crawler/bin/python -u
 
+import pytz
+from datetime import datetime
 import personalInf
 from threading import Thread
 import time
@@ -136,11 +138,16 @@ q = None
 cookieValue = None
 
 
+
+
 def check():
+    
     global q
     tata = 0
     ti = 0
     TT = 0
+    tz_TW = pytz.timezone('Asia/Taipei')
+    
     while True:
         time.sleep(1)
 
@@ -160,6 +167,8 @@ def check():
                 except:
                     print('\nERROR.')
             if tata > 30:
+                datetime_TW = datetime.now(tz_TW)
+                print("Time:", datetime_TW.strftime("%Y-%m-%d %H:%M:%S"))
                 tata = 0
                 try:
                     driver.execute_script("countSecond = 3000")
