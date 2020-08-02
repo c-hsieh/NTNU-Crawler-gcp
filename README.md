@@ -2,7 +2,7 @@
 
 ```sh
 sudo apt-get update
-sudo apt-get install bzip2 libxml2-dev
+sudo apt-get install bzip2 libxml2-dev wget
 
 wget https://repo.anaconda.com/miniconda/Miniconda3-4.7.12.1-Linux-x86_64.sh
 
@@ -45,6 +45,7 @@ sudo apt-get install libtesseract-dev
 * ### run getCookie.py
 ```sh
 chmod +x getCookies_Linux.py catCookies.sh createCookies.sh killCookies.sh
+mkdir cookies
 ./createCookies.sh [arg1] [arg2]
 ./catCookies.sh [arg1] [arg2]
 ./killCookies.sh [arg1] [arg2]

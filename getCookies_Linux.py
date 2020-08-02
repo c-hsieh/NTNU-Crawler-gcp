@@ -1,4 +1,4 @@
-#!/home/genius861030/miniconda3/envs/crawler/bin/python -u
+#!/home/cloud_ntnu/miniconda3/envs/crawler/bin/python -u
 
 import personalInf
 from threading import Thread
@@ -145,7 +145,7 @@ while success != True:
     options.add_argument('--headless')
     options.add_argument("window-size=1200x600")
     # driver = webdriver.Chrome(
-    #     "/Users/singularity/anaconda3/envs/crawler/bin/chromedriver", options=options)
+    #     "/home/cloud_ntnu/miniconda3/envs/crawler/bin/chromedriver", options=options)
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
     # print("chromedriverPath", chromedriverPath)
     driver.get(
