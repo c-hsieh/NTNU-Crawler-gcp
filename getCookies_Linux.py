@@ -28,6 +28,9 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import UnexpectedAlertPresentException
 
+from webdriver_manager.chrome import ChromeDriverManager
+
+
 import os
 import sys
 
@@ -141,8 +144,9 @@ while success != True:
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
     options.add_argument("window-size=1200x600")
-    driver = webdriver.Chrome(
-        "/home/genius861030/miniconda3/envs/crawler/bin/chromedriver", options=options)
+    # driver = webdriver.Chrome(
+    #     "/Users/singularity/anaconda3/envs/crawler/bin/chromedriver", options=options)
+    driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
     # print("chromedriverPath", chromedriverPath)
     driver.get(
         "http://cos1.ntnu.edu.tw/AasEnrollStudent/LoginCheckCtrl?language=TW")
@@ -150,14 +154,14 @@ while success != True:
     driver.save_screenshot(filenName+'capture.png')
     vfImg = driver.find_element_by_id("imageBoxCmp")
 
-    left = vfImg.location['x']
-    right = left + vfImg.size['width']
-    top = vfImg.location['y']
-    bottom = top + vfImg.size['height']
-    # left = vfImg.location['x']+895
-    # right = left + vfImg.size['width']+50
-    # top = vfImg.location['y']+215
-    # bottom = top + vfImg.size['height']+20
+    # left = vfImg.location['x']
+    # right = left + vfImg.size['width']
+    # top = vfImg.location['y']
+    # bottom = top + vfImg.size['height']
+    left = vfImg.location['x']+895
+    right = left + vfImg.size['width']+50
+    top = vfImg.location['y']+215
+    bottom = top + vfImg.size['height']+20
 
     img = Image.open(filenName+'capture.png')
     img = img.crop((left, top, right, bottom))
@@ -197,7 +201,7 @@ while success != True:
                 EC.element_to_be_clickable((By.ID, 'button-1005-btnWrap')))
             fastrack1005.click()
         except:
-            print("wowo")
+            print(f"none button-1005-btnWrap")
         fastrack = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.ID, 'button-1017-btnWrap')))
         fastrack.click()
