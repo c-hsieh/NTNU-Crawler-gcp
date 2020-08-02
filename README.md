@@ -44,6 +44,13 @@ sudo apt-get install libtesseract-dev
 ```
 * ### run getCookie.py
 ```sh
+touch personalInf.py
+echo "studentID = \"\"" >> personalInf.py
+echo "password = \"\"" >> personalInf.py
+
+```
+
+```sh
 chmod +x getCookies_Linux.py catCookies.sh createCookies.sh killCookies.sh
 mkdir cookies
 ./createCookies.sh [arg1] [arg2]

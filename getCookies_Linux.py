@@ -154,14 +154,14 @@ while success != True:
     driver.save_screenshot(filenName+'capture.png')
     vfImg = driver.find_element_by_id("imageBoxCmp")
 
-    # left = vfImg.location['x']
-    # right = left + vfImg.size['width']
-    # top = vfImg.location['y']
-    # bottom = top + vfImg.size['height']
-    left = vfImg.location['x']+895
-    right = left + vfImg.size['width']+50
-    top = vfImg.location['y']+215
-    bottom = top + vfImg.size['height']+20
+    left = vfImg.location['x']
+    right = left + vfImg.size['width']
+    top = vfImg.location['y']
+    bottom = top + vfImg.size['height']
+    # left = vfImg.location['x']+895
+    # right = left + vfImg.size['width']+50
+    # top = vfImg.location['y']+215
+    # bottom = top + vfImg.size['height']+20
 
     img = Image.open(filenName+'capture.png')
     img = img.crop((left, top, right, bottom))
