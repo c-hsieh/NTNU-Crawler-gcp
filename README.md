@@ -32,15 +32,16 @@ pip install -r requirements.txt
 * ### [set up selenium python](https://github.com/garywu/google-compute-engine-selenium)
 
 ```sh
-wget https://raw.githubusercontent.com/garywu/gae-selenium/master/install.sh && chmod +x install.sh && ./install.sh &&  ./start_headless.sh && ./demo.py
+# wget https://raw.githubusercontent.com/garywu/gae-selenium/master/install.sh && chmod +x install.sh && ./install.sh &&  ./start_headless.sh && ./demo.py
+chmod +x install.sh && ./install.sh >> log.log
 
 mv chromedriver /home/[name]/miniconda3/envs/crawler/bin/
 ```
 * ### [set up Pytesseract](https://stackoverflow.com/questions/50951955/pytesseract-tesseractnotfound-error-tesseract-is-not-installed-or-its-not-i)
 
 ```sh
-sudo apt-get install tesseract-ocr
-sudo apt-get install libtesseract-dev
+sudo apt-get install -y --force-yes tesseract-ocr
+sudo apt-get install -y --force-yes libtesseract-dev
 ```
 * ### run getCookie.py
 ```sh

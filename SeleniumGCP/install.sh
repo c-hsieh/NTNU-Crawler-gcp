@@ -72,12 +72,13 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 wget -N http://chromedriver.storage.googleapis.com/2.36/chromedriver_linux64.zip
 unzip -o chromedriver_linux64.zip
 chmod +x chromedriver
-sudo rm -f /usr/local/share/chromedriver
-sudo rm -f /usr/local/bin/chromedriver
-sudo rm -f /usr/bin/chromedriver
-sudo mv -f chromedriver /usr/local/share/chromedriver
-sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
-sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
+sudo mv chromedriver $HOME
+# sudo rm -f /usr/local/share/chromedriver
+# sudo rm -f /usr/local/bin/chromedriver
+# sudo rm -f /usr/bin/chromedriver
+# sudo mv -f chromedriver /usr/local/share/chromedriver
+# sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+# sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
 
 #============
 # GeckoDriver
