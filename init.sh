@@ -20,8 +20,8 @@ rm Miniconda3-4.7.12.1-Linux-x86_64.sh
 
 echo "eval $($HOME/miniconda3/bin/conda shell.bash hook)" >> ~/.bashrc
 # eval "$($HOME/miniconda3/bin/conda shell.bash hook)"
-source .bashrc
-# . ~/.bashrc
+source ~/.bashrc
+. ~/.bashrc
 
 echo -e "${YELLOW}Install git${NC}\n"
 # install git
