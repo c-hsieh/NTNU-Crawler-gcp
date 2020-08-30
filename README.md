@@ -2,7 +2,7 @@
 
 ```sh
 sudo apt-get update
-sudo apt-get install bzip2 libxml2-dev wget
+sudo apt-get install -y --force-yes bzip2 libxml2-dev wget
 
 wget https://repo.anaconda.com/miniconda/Miniconda3-4.7.12.1-Linux-x86_64.sh
 
@@ -15,7 +15,7 @@ source .bashrc
 ```
 * ### install git
 ```sh
-sudo apt install git-all
+sudo apt install -y --force-yes git-all
 ```
 
 * ### [github](https://github.com/Aaron3141/NTNU-Crawler-gcp.git)
@@ -24,9 +24,9 @@ git clone https://github.com/Aaron3141/NTNU-Crawler-gcp.git
 ```
 * ### set up python enviroment
 ```sh
-conda env create -f env.yml
+conda env create -f env.yml --yes
 conda activate crawler
-pip install -r requirements.txt 
+yes | pip install -r requirements.txt 
 ```
 
 * ### [set up selenium python](https://github.com/garywu/google-compute-engine-selenium)
