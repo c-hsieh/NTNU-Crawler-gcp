@@ -14,12 +14,14 @@ sudo apt-get install -y --force-yes bzip2 libxml2-dev wget
 wget https://repo.anaconda.com/miniconda/Miniconda3-4.7.12.1-Linux-x86_64.sh
 
 # bash Miniconda3-4.7.12.1-Linux-x86_64.sh
-bash ~/Miniconda3-4.7.12.1-Linux-x86_64.sh -b -p $HOME/miniconda
+bash ~/Miniconda3-4.7.12.1-Linux-x86_64.sh -b -p $HOME/miniconda3
 
 rm Miniconda3-4.7.12.1-Linux-x86_64.sh
 
+echo "eval \"$($HOME/miniconda3/bin/conda shell.bash hook)\"" >> ~/.bashrc
+# eval "$($HOME/miniconda3/bin/conda shell.bash hook)"
 source .bashrc
-. ~/.bashrc
+# . ~/.bashrc
 
 echo -e "${YELLOW}Install git${NC}\n"
 # install git
@@ -50,7 +52,7 @@ cd NTNU-Crawler-gcp/SeleniumGCP
 chmod +x install.sh && ./install.sh >> log.log
 cd ~
 cd selenium
-mv chromedriver $pwd\miniconda3/envs/crawler/bin/
+mv chromedriver $HOME/miniconda3/envs/crawler/bin/
 cd ~
 
 echo -e "${YELLOW}Set uppppp${NC}\n"
@@ -60,9 +62,13 @@ cd NTNU-Crawler-gcp
 chmod +x getCookies_Linux.py catCookies.sh createCookies.sh killCookies.sh
 mkdir cookies
 touch personalInf.py
-read -r -p 'Give me a studentID: \n' studentID
-echo -e "studentID = \"$studentID\"" >> personalInf.py
-read -r -p 'Give me a password: \n' password
-echo -e "password = \"$password\"" >> personalInf.py
+
+echo -e "Give me a studentID: \n"
+read -r studentID
+echo "studentID = \"$studentID\"" >> personalInf.py
+
+echo -e 'Give me a password: \n'
+read -r -s  password
+echo "password = \"$password\"" >> personalInf.py
 
 echo -e "${YELLOW}DONE!!!!!!${NC}\n"

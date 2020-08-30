@@ -1,3 +1,8 @@
+### Set up all
+```sh
+wget https://raw.githubusercontent.com/Aaron3141/NTNU-Crawler-gcp/master/init.sh && chmod +x init.sh && ./init.sh
+```
+
 * ### [set up Anaconda under Google Cloud VM and transfer files on Windows](https://medium.com/google-cloud/set-up-anaconda-under-google-cloud-vm-on-windows-f71fc1064bd7)
 
 ```sh
