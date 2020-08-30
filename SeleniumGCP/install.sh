@@ -72,7 +72,7 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 wget -N http://chromedriver.storage.googleapis.com/2.36/chromedriver_linux64.zip
 unzip -o chromedriver_linux64.zip
 chmod +x chromedriver
-sudo mv chromedriver $HOME
+# sudo mv chromedriver $HOME
 # sudo rm -f /usr/local/share/chromedriver
 # sudo rm -f /usr/local/bin/chromedriver
 # sudo rm -f /usr/bin/chromedriver

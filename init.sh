@@ -18,7 +18,7 @@ bash ~/Miniconda3-4.7.12.1-Linux-x86_64.sh -b -p $HOME/miniconda3
 
 rm Miniconda3-4.7.12.1-Linux-x86_64.sh
 
-echo "eval \"$($HOME/miniconda3/bin/conda shell.bash hook)\"" >> ~/.bashrc
+echo "eval $($HOME/miniconda3/bin/conda shell.bash hook)" >> ~/.bashrc
 # eval "$($HOME/miniconda3/bin/conda shell.bash hook)"
 source .bashrc
 # . ~/.bashrc
