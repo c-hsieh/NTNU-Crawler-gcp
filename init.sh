@@ -3,8 +3,6 @@
 RED='\033[0;31m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
-# printf "I ${RED}love${NC} Stack Overflow\n"
-# echo -e "I ${YELLOW}love${NC} Stack Overflow\n"
 
 echo -e "${YELLOW}Set up Miniconda${NC}\n"
 # set up Anaconda under Google Cloud VM and transfer files on Windows
@@ -19,9 +17,9 @@ bash ~/Miniconda3-4.7.12.1-Linux-x86_64.sh -b -p $HOME/miniconda3
 rm Miniconda3-4.7.12.1-Linux-x86_64.sh
 
 echo "eval $($HOME/miniconda3/bin/conda shell.bash hook)" >> ~/.bashrc
-# eval "$($HOME/miniconda3/bin/conda shell.bash hook)"
+eval $($HOME/miniconda3/bin/conda shell.bash hook)
 source ~/.bashrc
-. ~/.bashrc
+# . ~/.bashrc
 
 echo -e "${YELLOW}Install git${NC}\n"
 # install git
